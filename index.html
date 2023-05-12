@@ -4,10 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastrar</title>
+    <!-- Link com CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <main>
+
+        <!-- Redes Sociais -->
+        <h1>Criar conta</h1>
+        <div class="social-media">
+            <a href="https://www,google.com" target="_blank">
+                <img src="assets/google.png" alt="google">
+            </a>
+
+            <a href="https://pt-br.facebook.com" target="_blank">
+                <img src="assets/facebook.png" alt="facebook">
+            </a>
+
+            <a href="https://br.linkedin.com" target="_blank">
+                <img src="assets/linkedin.png" alt="linkedin">
+            </a>
+            
+        </div>
+
+        <!-- _________________________________________ -->
+        <!-- Início do trabalho -->
+
+        <form action="https://api.sheetmonkey.io/form/gY6DVBwnvmWd1ntbDRqLhN" method="post">
+            <label for="name">
+                <span>nome</span>
+                <input type="text" id="nome" name="name">
+            </label>
+
+            <label>
+                <span>cep</span>
+                <input type="cep" id="cep" value="" size="10" maxlength="9"
+                    onblur="pesquisacep(this.value)" />
+            </label>
+
+            <label>
+            <span>rua</span>
+                <input name="rua" type="text" id="rua" size="60" />
+            </label>
+
+            <label>
+                <span>Bairro:</span>
+                <input name="bairro" type="text" id="bairro" size="40" />
+            </label>
+
+            <label> 
+                <span> </span>
+            </label>
+        </form>
+    </main>
+
     
 </body>
 </html>
