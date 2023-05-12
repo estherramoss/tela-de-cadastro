@@ -1,0 +1,234 @@
+/* Fonte (poppins) imortada Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family= Ubuntu :ital,wght@1,300 & display=swap');
+
+/*reset dos padrões do navegador*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+/*cor de fundo página e cor da fonte*/
+body {
+    background: #1B2029;
+    color: white;
+    font-weight: 400;
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+
+}
+
+main {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/*____________________________________*/
+/*estilo do título e redes sociais*/
+
+main h1 {
+    color: #8880FE;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+
+}
+
+main .social-media {
+    display: flex;
+    align-content: center;
+
+}
+
+/*tira o sublinhado*/
+main .social-media a {
+    text-decoration: none;
+
+}
+
+/*ajuste do tamanho das imagens*/
+main .social-media img{
+    width: 22px;
+    margin: 3rem;
+
+}
+
+/*retira a margem esquerda da fugura do Google*/
+main.social-media a:first-child img {
+    margin-left: 0;
+
+}
+
+/*_____________________________________*/
+/*estilo da linha de divisão*/
+
+/*espaçamento do OR em relação as figuras*/
+main.alternative{
+    margin-top: 0.5rem;
+
+}
+
+/*estilo da palavra OR*/
+main .alternative span {
+    font-size: 1.3rem;
+    font-weight: 200;
+    color: rgba(255, 255,255,0.3);
+    position: relative;
+
+}
+
+/*linhas antes e depois da palavra OR*/
+main .alternative span::before, main .alternative span::after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 100px;
+    bottom: 50%;
+    right: 50px;
+    background: rgba(255, 255,255,0.3);
+
+}
+
+/*alinhamento das linhas*/
+main .alternative span::after {
+    left: 50px;
+
+}
+
+/*___________________________________*/
+/*estilo doformulário*/
+
+/*alinhamento das caixas de entreda Forms*/
+main form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/*alinhamento dos textos das caixas de entrada Forms*/
+main form label{
+    display: flex;
+    flex-direction: column;
+
+}
+
+/*letras do form acima*/
+main form label{
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+
+}
+
+/*estilo interno do Form*/
+main form input{
+    background: #161923;
+    width: 300px;
+    height: 25px;
+    padding: 0 0.5rem;
+    margin-top: 0.8rem;
+    outline: none;
+    color: rgba(166, 166, 166);
+    font-size: 0.9rem;
+    border: 1px solid #040B18;
+    border-radius: 5px;
+
+}
+
+/*estilo do botão sing up*/
+main form input[type="submit"] {
+    cursor: pointer;
+    width: 50%;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 32px;
+    background: #6C63FF;
+    color: white;
+    font-size: 1.2rem;
+    transition: all .3s ease-in-out;
+
+}
+
+/*transição cor do botão Sing Up quando mouse em cima*/
+main form input[type="submit"]:hover {
+    background: #5952d4;
+}
+
+/*alinhamento da figura na parte inferior esquerda*/
+section.images{
+    width: 50vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 2rem;
+
+}
+
+/*tamnho da imagem*/
+section.images img{
+    width: 100%;
+
+}
+
+/*criação do conteúdo via CSS*/
+section.images .circle {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, #E8CBC0, #636FA4);
+    clip-path: circle(40% at right 80%);
+    z-index: -1
+
+}
+
+/*_____________________________*/
+/*responsividade de acordo com o tamanho*/
+
+/*telas grandes*/
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+    section.images img{
+        width: 110%;
+    }
+
+    section.images .circle {
+        clip-path: circle(35% at right 80%);
+    }
+}
+
+/*telas médias*/
+@media only screen and (max-width: 900px) {
+    section.images {
+        
+        display: none;
+        visibility: hidden;
+    }
+
+    main {
+        width: 100vw;
+    }
+}
+
+/*telas pequenas*/
+@media only screen and (max-width: 450px) {
+    main h1 {
+        font-size: 1rem;
+    }
+
+    main .alternative span {
+        font-size: 0.8rem;
+    }
+
+    main form label span, main form input[type="submit"] {
+        font-size: 0.8rem;
+    }
+}
